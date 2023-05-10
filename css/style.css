@@ -1,0 +1,405 @@
+:root {
+    /* Color Palettes */
+    --primary:  #1b2d99;
+    --primary2: #203ac3;
+    --primary3: #3d52df;
+    --primary4: #6779e5;
+    --primary5: #93a0ee;
+    --white:    rgb(255, 255, 255);
+    --black:    rgb(0, 0, 0);
+
+    /* Fonts */
+    --principalFont: 'Open Sans', sans-serif;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*:before,*:after {
+    box-sizing: inherit;
+}
+
+/* Globals */
+body{
+    background-image: linear-gradient(to bottom, #1628b0 40%, rgb(37, 156, 203) 100%);
+    font-size: 1.6rem;
+    /* line spacing */
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --------------Header----------------- */
+.header{
+   display: flex;
+   justify-content: center; 
+}
+.header__logo{
+    margin: 0.5rem;
+}
+/* ----------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+/* -------------Navegation----------------- */
+.navegationBackground{
+    background-color: #0014ae;
+}
+.navegation{
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+@media (min-width: 280px) {
+    .navegation{
+        flex-direction: row;
+    }
+}
+.navigation__contenedor{
+    max-width: 40rem;
+    margin: 0 auto;
+}
+.navegation__link {
+    /* Removes underline */
+    text-decoration: none;
+    font-family: var(--principalFont);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    padding: 0rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+.navegation__link:hover{
+    background-color: #238dde;
+    color: white;
+}
+.navegation__link--active{
+    color: rgb(255, 205, 69);
+}
+/* ---------------------------------- */
+
+
+/* --------------------------- Main ---------------------- */
+.main{
+}
+.main__contenedor{
+    /* top right bottom left  */
+margin: 0rem 1.5rem;
+max-width: 140rem;
+}
+.main__title{
+    padding-top: 1rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin: 2.5rem 0rem 0rem 0rem;
+
+}
+.main__title--text{
+    
+    padding: 0rem 3rem 2rem;
+    text-align: justify;
+    color: black;
+    font-size: 2rem;
+}
+
+@media (min-width: 1439px) {
+    .main__contenedor {
+        margin: 0 auto 0 auto;
+
+    }
+
+    .main__title--text {
+        padding: 0rem 10rem 2rem;
+    }
+}
+.main__title--text--service{
+    color: black;
+    text-align: justify;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.main__title--text--info{
+    color: black;
+    text-align: center;
+    margin: 0.5rem 0.5rem;
+}
+
+
+
+
+@media (min-width: 780px) {
+    .main__grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio .icon{
+    height: 12rem;
+    width: 12rem;
+    background-color: rgb(218, 146, 38);
+    border-radius: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* products */
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+.product{
+    background-color: rgb(190, 179, 179);
+    padding: 1rem 1rem 0rem 1rem;
+}
+.product__image{
+    width: 100%;
+}
+.product__info{
+    text-align: center;
+}
+.product__name{
+    font-size: 2rem;
+    color: black;
+    line-height: 1;
+    padding: 1rem;
+    margin: 0;
+
+}
+.product__price{
+    font-size: 1.8rem;
+    color: black;
+    line-height: 1;
+    padding: 1rem;
+    margin: 0;
+}
+/* -------- */
+
+
+
+/* ------------------------------------------------------- */
+
+@media (min-width: 786px) {
+    .contenedorCampos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto 12rem;
+        column-gap: 1.5rem;
+        row-gap: 1rem;
+    }  
+}
+
+.contenedorContacto{
+    font-family: var(--principalFont);
+    max-width: 120rem;
+    background-color: white;
+    color: black;
+    /* Primer valor es el margun top, segundo margin right, margin bottom, margin left */
+    margin: 0 auto 0 auto;
+    margin-top: 3rem;
+    padding: 1rem 4rem;
+}
+.contacto{
+    background-color: rgb(218, 146, 38);
+    padding: 1rem;
+    border-radius: 1rem;
+    width: min(100rem, 100%);
+    margin: 0 auto;
+    padding: 2rem 2rem .5rem 2rem;
+}
+.contacto fieldset{
+    border: none;
+}
+.campo label{
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.campo:nth-child(3){
+    grid-column: 1 / 3;
+}
+.campo:nth-child(4){
+    grid-column: 1 / 3;
+}
+
+.campo textarea{
+    height: 10rem;
+}
+.inputText{
+    width: 100%;
+    border-radius: .5rem;
+    padding: 1rem;
+    border: none;
+}
+
+.botonEnviar {
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #266eda;
+    border-radius: .5rem;
+    text-align: center;
+    width: 100%;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .botonEnviar{
+        width: 30%;
+    }    
+}
+
+.botonEnviarFlex{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.botonEnviar:hover{
+    cursor: pointer;
+    background-color: #477de0;
+    color: white;
+}
+
+
+
+
+
+
+/* -----Footer--------- */
+.footer{
+    background-color: white;
+    padding: 0.01rem 0rem;
+    margin-top: 2rem;
+
+}
+.footer__text{
+    text-align: center;
+    color: black;
+}
+/* ---------------------- */
+
+.contenedorContacto__titulo{
+    font-size: 2rem;
+    margin: 0rem 0rem 1rem;
+}
+
+
+.boton {
+    font-family: var(--principalFont);
+    font-size: 2rem;
+    padding: .5rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgb(218, 146, 38);
+    border-radius: .5rem;
+    text-align: center;
+    width: 40%;
+    border: none;
+    margin-bottom: 2rem;
+}
+.boton:hover{
+    background-color: #238dde;
+    cursor: pointer;
+}
+
+.centerText{
+    text-align: center;
+}
+
+.underline{
+    text-decoration: underline;
+}
+.backgroundcolorwhite{
+    background-color: white;
+    border-radius: 3rem;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+
+a{
+    text-decoration: none;
+}
+p{
+    font-size: 1.8rem;
+    font-family: var(--principalFont);
+    color: var(--white);
+}
+
+img{
+    max-width: 100%;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+
+h1, h2, h3{
+    text-align: center;
+    color: var(--black);
+    font-family: var(--principalFont);
+}
+h2{
+    padding-top: 1rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 3rem;
+    margin: 2.5rem 0rem 0rem 0rem;
+
+}
+h3{
+    font-size: 2.5rem;
+    margin: 2.5rem 0rem 1rem 0rem;
+
+}
